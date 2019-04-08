@@ -1,0 +1,80 @@
+<mvc:View controllerName="game.game.controller.main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}" showHeader="true" showSubHeader="true" visible="true" enableScrolling="false">
+					<headerContent>
+						<tnt:ToolHeader >
+							<ToolbarSpacer/>
+							<Title text="RCB VS KKR" titleStyle="H1" level="H1" class="sapUiTinyMargin"/>
+							<ToolbarSpacer/>
+						</tnt:ToolHeader>
+					</headerContent>
+					<content>
+						<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" mode="StretchCompressMode">
+							<detailPages>
+								<Page id="detail" title="Booking Closes in 30 min" enableScrolling="true" showFooter="true" floatingFooter="true">
+									<content>
+										<Table id="idProductsTable">
+											<headerToolbar>
+												<Toolbar>
+													<content>
+														<Title text="To win the match" level="H6"/>
+													</content>
+												</Toolbar>
+											</headerToolbar>
+											<infoToolbar>
+												<Toolbar active="ture">
+													<Label text="RCB "/>
+												</Toolbar>
+											</infoToolbar>
+											<columns>
+												<Column width="12em">
+													<Text text=""/>
+												</Column>
+												<Column>
+													<Text text=""/>
+												</Column>
+											</columns>
+											<!--<items>-->
+											<!--	<ColumnListItem>-->
+											<!--		<cells>-->
+											<!--			<Text text="rcb"/>-->
+											<!--			<Text text="kkr"/>-->
+											<!--		</cells>-->
+											<!--	</ColumnListItem>-->
+											<!--</items>-->
+										</Table>
+									</content>
+									<footer>
+										<OverflowToolbar>
+											<ToolbarSpacer/>
+											<Button type="Accept" text="Accept"/>
+										</OverflowToolbar>
+									</footer>
+								</Page>
+							</detailPages>
+							<masterPages>
+								<Page id="master" title="BET SLIP" enableScrolling="false" floatingFooter="true">
+									<content>
+										<List>
+											<items>
+												<StandardListItem title="To Master2"/>
+											</items>
+										</List>
+									</content>
+									<footer>
+										<OverflowToolbar>
+											<ToolbarSpacer/>
+											<Button type="Accept" text="Accept"/>
+										</OverflowToolbar>
+									</footer>
+								</Page>
+							</masterPages>
+						</SplitApp>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
